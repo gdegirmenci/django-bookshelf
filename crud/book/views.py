@@ -1,6 +1,42 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+# Import Generic View for listing (r operation)
+from django.views.generic import ListView, DetailView
 
-# Create your views here.
+# Import Generic View for creating, updating and deleting (cud operations)
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
+# Resolving URLs
+from django.urls import reverse_lazy
+
+# Import Book Model
+from book.models import Book
+
+# List View
+class BookList(ListView):
+    model = Book
+
+# Detail View
+class BookView(DetailView):
+    model = Book
+
+# Create View
+class BookCreate(CreateView):
+    model = Book
+    fields = ['name', 'author', 'publisher']
+    # Setting returning URL
+    success_url = reverse_lazy('book_list')
+
+# Update View
+class BookUpdate(UpdateView):
+    model = Book
+    fields = ['name', 'author', 'publisher']
+    # Setting returning URL
+    success_url = reverse_lazy('book_list')
+
+# Delete View
+class BookDelete(DeleteView):
+    model = Book
+    # Setting returning URL
+    success_url = reverse_lazy('book_list')
