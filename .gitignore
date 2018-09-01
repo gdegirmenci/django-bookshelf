@@ -6,3 +6,8 @@ n2env/
 .idea/*
 idea/
 idea/*
+venv/*
+venv/
+venv
+crud/book/__pycache__/*
+crud/crud/__pycache__/*
