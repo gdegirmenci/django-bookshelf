@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+# Import include function to inspect Book URLs
+from django.urls import include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url('book/', include('book.urls')),
 ]
