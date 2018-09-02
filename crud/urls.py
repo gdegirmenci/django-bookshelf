@@ -25,5 +25,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('book/', include('book.urls')),
+    # Make Book App as Root
+    url(r'^', include('book.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
