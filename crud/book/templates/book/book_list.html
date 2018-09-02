@@ -1,10 +1,11 @@
 {% extends 'book/base.html' %}
 
 {% block content %}
-    <h1 class="my-4">Home
+    <h1 class="my-4">Home -
         <small>Book List</small>
     </h1>
     <div class="row">
+    {% if object_list %}
         <div class="col-12" style="overflow-x: scroll">
             <table class="table">
               <thead class="thead-dark">
@@ -31,5 +32,12 @@
               </tbody>
             </table>
         </div>
+    {% else %}
+    <div class="col-12">
+        <div class="alert alert-warning" role="alert">
+            There is no book, yet. But if you want, you can add from <a class="badge badge-primary" href="{% url "book_new" %}"><strong>here.</strong></a>
+        </div>
+    </div>
+    {% endif %}
     </div>
 {% endblock %}

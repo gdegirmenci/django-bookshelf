@@ -1,7 +1,7 @@
 {% extends 'book/base.html' %}
 
 {% block content %}
-    <h1 class="my-4">Delete
+    <h1 class="my-4">Delete - 
         <small>{{ object }}</small>
     </h1>
     <div class="row">
@@ -11,8 +11,8 @@
                 <div class="alert alert-warning" role="alert">
                   Are you sure to delete {{ object }} ?
                 </div>
-                <input type="submit" class="btn btn-primary" value="Yes, delete it" />
-                <a class="btn btn-secondary" href="{% url 'book_list' %}">No, just I've tried the delete button</a>
+                <input type="submit" class="btn btn-info" value="Yes, delete it" />
+                <a class="btn btn-success" href="{% url 'book_list' %}">No, just I've tried the delete button</a>
             </form>
         </div>
     </div>
