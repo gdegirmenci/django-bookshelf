@@ -1,0 +1,17 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <h1 class="my-4">New Book</h1>
+    <div class="row">
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <input type="submit" value="Add" class="btn btn-success"/>
+        </form>
+    </div>
+{% endblock %}

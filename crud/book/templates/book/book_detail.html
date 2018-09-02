@@ -1,0 +1,14 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <h1 class="my-4">Detail
+        <small>{{ object.name }}</small>
+    </h1>
+    <div class="row">
+        <ul class="list-group">
+          <li class="list-group-item">Name: {{ object.name }}</li>
+          <li class="list-group-item">Author: {{ object.author }}</li>
+          <li class="list-group-item">Publisher: {{ object.publisher }}</li>
+        </ul>
+    </div>
+{% endblock %}

@@ -27,13 +27,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item  {% if request.path == '/book/' %} active {% endif %}">
               <a class="nav-link" href="/book/">Home
-                <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/book/new">New Book</a>
+            <li class="nav-item {% if request.path == '/book/new' %} active {% endif %}">
+              <a class="nav-link" href="{% url "book_new" %}">New Book</a>
             </li>
           </ul>
         </div>
