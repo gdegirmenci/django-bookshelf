@@ -6,26 +6,34 @@
     <title>Django Book App</title>
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <style>
+    body {
+        background: whitesmoke
+    }
+    #app {
+        background: white;
+        padding: 30px;
+        margin: 30px auto;
+        -webkit-box-shadow: 1px 1px 2px 0px rgba(224,224,224,1);
+        -moz-box-shadow: 1px 1px 2px 0px rgba(224,224,224,1);
+        box-shadow: 1px 1px 2px 0px rgba(224,224,224,1);
+        border-radius: 4px;
+    }
+    </style>
   </head>
   <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="/book/">Django Book</a>
+        <a class="navbar-brand" href="/">Django Book</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item  {% if request.path == '/book/' %} active {% endif %}">
-              <a class="nav-link" href="/book/">Home
-              </a>
-            </li>
-            <li class="nav-item {% if request.path == '/book/new' %} active {% endif %}">
-              <a class="nav-link" href="{% url "book_new" %}">New Book</a>
+            <li class="nav-item">
+              <a class="btn btn-outline-info btn-md" href="{% url "book_new" %}">+ New Book</a>
             </li>
           </ul>
         </div>
@@ -33,7 +41,7 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" id="app">
         {% block content %}
         {% endblock %}
     </div>
