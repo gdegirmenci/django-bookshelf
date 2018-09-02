@@ -1,2 +1,8 @@
-* linguist-vendored
-*.js linguist-vendored=false
+*.py text
+*.html text
+*.css text
+
+.gitattributes text
+
+*.py diff=python
+*.html diff=html
