@@ -13,6 +13,9 @@ from django.urls import reverse_lazy
 # Import Book Model
 from book.models import Book
 
+# Import Book Form
+from book.forms import BookForm
+
 # List View
 class BookList(ListView):
     model = Book
@@ -24,14 +27,14 @@ class BookView(DetailView):
 # Create View
 class BookCreate(CreateView):
     model = Book
-    fields = ['name', 'author', 'publisher']
+    form_class = BookForm
     # Setting returning URL
     success_url = reverse_lazy('book_list')
 
 # Update View
 class BookUpdate(UpdateView):
     model = Book
-    fields = ['name', 'author', 'publisher']
+    form_class = BookForm
     # Setting returning URL
     success_url = reverse_lazy('book_list')
 
