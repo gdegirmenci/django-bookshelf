@@ -34,7 +34,7 @@ class BookCreate(CreateView):
 # Update View
 class BookUpdate(UpdateView):
     model = Book
-    fields = ['name', 'author', 'publisher']
+    form_class = BookForm
     # Setting returning URL
     success_url = reverse_lazy('book_list')
 

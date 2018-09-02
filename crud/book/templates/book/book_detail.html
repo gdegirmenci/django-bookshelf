@@ -5,10 +5,13 @@
         <small>{{ object.name }}</small>
     </h1>
     <div class="row">
+    <div class="col-12">
         <ul class="list-group">
-          <li class="list-group-item">Name: {{ object.name }}</li>
-          <li class="list-group-item">Author: {{ object.author }}</li>
-          <li class="list-group-item">Publisher: {{ object.publisher }}</li>
+          <li class="list-group-item"><strong>Name:</strong> {{ object.name }}</li>
+          <li class="list-group-item"><strong>Author:</strong> {{ object.author }}</li>
+          <li class="list-group-item"><strong>Publisher:</strong> {{ object.publisher }}</li>
         </ul>
+    </div>
+
     </div>
 {% endblock %}
