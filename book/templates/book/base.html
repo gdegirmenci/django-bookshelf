@@ -17,6 +17,7 @@
         -webkit-box-shadow: 1px 1px 2px 0px rgba(224,224,224,1);
         -moz-box-shadow: 1px 1px 2px 0px rgba(224,224,224,1);
         box-shadow: 1px 1px 2px 0px rgba(224,224,224,1);
+        border-radius: 4px;
     }
     </style>
   </head>
@@ -31,12 +32,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item  {% if request.path == '/' %} active {% endif %}">
-              <a class="nav-link" href="/book/">Home
-              </a>
-            </li>
-            <li class="nav-item {% if request.path == '/new' %} active {% endif %}">
-              <a class="nav-link" href="{% url "book_new" %}">New Book</a>
+            <li class="nav-item">
+              <a class="btn btn-outline-info btn-md" href="{% url "book_new" %}">+ New Book</a>
             </li>
           </ul>
         </div>
