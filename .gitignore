@@ -9,5 +9,5 @@ idea/*
 venv/*
 venv/
 venv
-crud/book/__pycache__/*
-crud/crud/__pycache__/*
+book/__pycache__/*
+crud/__pycache__/*
