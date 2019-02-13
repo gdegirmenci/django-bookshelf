@@ -11,3 +11,4 @@ venv/
 venv
 book/__pycache__/*
 crud/__pycache__/*
+*.pyc
